@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Distinct mode selection and entry",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": ["mode selection", "mode-specific entry", "mode switching"],
+    "description": "Each dashboard choice loads its own named rules and arena behavior.",
+    "steps": [
+      "Select Career, enter, then return to the dashboard",
+      "Select AI Rival and enter",
+      "Select Free Play and enter",
+      "Select Boss Rush and enter"
+    ],
+    "expected": "Each selection opens the matching mode with its own objective and HUD."
+  },
+  {
+    "name": "Career mission progression",
+    "viewport": "desktop",
+    "covers": ["five-return sector missions", "moving gate obstacle", "sector progression"],
+    "description": "Career uses a moving gate and a five-return mission objective.",
+    "steps": [
+      "Choose Career",
+      "Start a run and return the ball five times"
+    ],
+    "expected": "Mission progress advances to five and the sector increases."
+  },
+  {
+    "name": "Adaptive AI Rival duel",
+    "viewport": "desktop",
+    "covers": ["player shot history", "adaptive opponent counter-positioning", "duel scoring"],
+    "description": "Rival mode tracks paddle positions and uses that history to counter repeated side bias.",
+    "steps": [
+      "Choose AI Rival",
+      "Repeatedly position the paddle toward one side",
+      "Play a rally"
+    ],
+    "expected": "The opponent uses the recent player-position average to adjust its interception target."
+  },
+  {
+    "name": "Free Play sandbox settings and target practice",
+    "viewport": "mobile",
+    "covers": ["ball speed setting", "paddle width setting", "moving target", "unlimited practice recovery", "touch controls"],
+    "description": "Free Play exposes adjustable training settings and a moving target ring.",
+    "steps": [
+      "Choose Free Play",
+      "Adjust ball speed and paddle width",
+      "Enter the arena and hit the moving target",
+      "Miss the ball"
+    ],
+    "expected": "Settings affect the run, target hits award bonus points, and a miss restarts practice without reducing lives."
+  },
+  {
+    "name": "Boss Rush health and phases",
+    "viewport": "desktop",
+    "covers": ["boss health bar", "critical hit damage", "three boss attack phases", "successive boss encounters"],
+    "description": "Boss Rush begins with a boss encounter and escalates its movement pattern as health falls.",
+    "steps": [
+      "Choose Boss Rush",
+      "Start and return shots to the boss",
+      "Continue until boss health reaches each phase threshold"
+    ],
+    "expected": "The boss health bar falls, critical returns deal extra damage, and boss movement accelerates across three phases."
+  }
+]
